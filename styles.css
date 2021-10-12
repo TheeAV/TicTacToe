@@ -1,38 +1,55 @@
+body {
+    background-color: black;
+    color: white;
+}
 #board{
-    padding-top: 5em;
+    padding: 3em;
     text-align: center;
-
 }
 
-.box{
+.row  > div {
     float: left;
     height: 100px;
-     width: 100px;
-    clear: right;
+    width: 100px;
+    cursor: pointer;
+    line-height: 100px;
+    font-size: 75px;
 }
 
-.row{
-    margin: 0 auto;
-    width: 302px;
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
     
 }
 
+.row {
+    margin: 0 auto;
+    width: 302px;
+    clear: both;
+}
+
 .top{
-    border-bottom: 1px black solid;
+    border-bottom: 1px purple solid;
 }
 
 .bottom{
-    border-top: 1px black solid;
+    border-top: 1px purple solid ;
+    
 }  
 
 .left{
-    border-right: 1px solid black;
+    border-right: 1px solid purple;
 }
 
 .right{
-    border-left: 1px solid black;
+    border-left: 1px solid purple;
 }
 
-.box:hover{
-    cursor: pointer;
+button {
+    border-color: white;
+    background-color: purple;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.452) 2px 3px;
+    border-radius:  .4rem;
 }
